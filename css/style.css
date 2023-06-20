@@ -1,0 +1,65 @@
+*{margin: 0;padding: 0;font-size: 100%;box-sizing: border-box; font-family: sans-serif;}
+ul {list-style: none;}
+header{ position: relative; color: #fff;  display: flex; flex-direction: row;justify-content: space-around;align-items: center;background-color:#777;height:10vh;width:100vw; }
+header h1{ font-size:2rem; text-shadow:1px 1px #000; }
+header nav {display: flex; justify-content: center;align-items: center;}
+header nav .botao{display: none;}
+header nav ul{display: flex;justify-content: center;align-items: center; text-align: center;}
+header nav ul li{font-size: 1.3rem; padding: 0 50px 3px 0; position: relative; cursor: pointer; text-shadow: 1px 1px #000}
+header nav ul li:last-child{padding: 1rem;background-color:#06f;border-radius: 1rem; margin-left: 50px;transition: all .5s ease-in-out;}
+header nav ul li:hover:last-child{background-color: #06c;}
+header nav ul li:after{
+	content: " ";
+	width: 0%;
+	height: .2rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+    background-color: #fff;
+    transition-property: all;transition-timing-function: ease-in-out; transition-duration: .4s;
+}
+header nav ul li:last-child:after{opacity: 0;}
+
+header nav ul li:hover:after{
+	width: 95%;
+}
+.manter:after{
+  content: " ";
+  width: 95%;
+  height: .2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+    background-color: #fff;
+    transition-property: all;transition-timing-function: ease-in-out; transition-duration: .4s;
+
+}
+
+
+
+@media (max-width:750px) {
+  header {justify-content: space-between;}
+  header nav ul{
+  	flex-direction: column; 
+  	justify-content: center; 
+  	align-items: center; 
+  	position: absolute;
+  	top: 10vh;
+  	left: -100rem; 
+  	background-color: #777;
+  	width: 100%;
+  	text-align: center;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+  }
+  header ul li:hover:after{ content: none;}
+  header h1{margin-left: 10px;}
+  header nav ul li{padding: 5px 100%; }
+  header nav ul li:hover{background-color: #999;}
+  header nav ul li:last-child{margin-left:0px;}
+  header nav .botao{ display:block; margin-right: 10px;  cursor: pointer;}
+  .mostrar-menu{left: 0;}
+
+  
+}
